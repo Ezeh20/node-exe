@@ -27,6 +27,6 @@ fs.createReadStream("exoplanet-nasa.csv")
 		console.log(error);
 	})
 	.on("end", () => {
-		console.log(`${result.length} planets found`);
+		console.log(result.map((planet) => planet.kepler_name));
 		console.log("End of stream");
 	});
